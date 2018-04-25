@@ -15,9 +15,19 @@ const mongoUri = `mongodb://${process.env.COSMOSDB_ACCOUNT}:${process.env.COSMOS
 // Local MongoDB Connection String
 // const mongoUri = `mongodb://localhost:27017/connect-heroes`;
 
+// function connect() {
+//   mongoose.set('debug', true);
+//   const db = mongoose.connect(mongoUri, { useMongoClient: true });
+//   return db;
+// }
+
 function connect() {
-  mongoose.set('debug', true);
-  return mongoose.connect(mongoUri, { useMongoClient: true });
+  mongoose.connect(mongoUri, { useMongoClient: true }, (err, db) => {
+    if (err) {
+        console.log('err', err + 'mongoURI' + mongoUri);
+    }
+    else { console.log('Connected', db)}
+  });
 }
 
 module.exports = {
