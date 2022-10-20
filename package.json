@@ -20,7 +20,7 @@
     "body-parser": "^1.18.2",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
-    "mongoose": "^4.13.0",
+    "mongoose": "^4.13.21",
     "vue": "^2.3.4",
     "vue-class-component": "^6.1.0",
     "vue-property-decorator": "^6.0.0",
